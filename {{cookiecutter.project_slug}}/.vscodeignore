@@ -1,0 +1,17 @@
+.vscode/**
+.vscode-test/**
+out/**/*.map
+src/**
+test/**
+.gitignore
+tsconfig.json
+esbuild.config.js
+copy-assets.js
+jest.config.js
+jest.setup.ts
+node_modules/**
+!node_modules/vscode-*/**
+coverage/**
+**/*.ts
+**/*.map
+.eslintrc.json

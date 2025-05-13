@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/mocha": "^10.0.10",
+    "@types/react": "^19.1.4",
+    "@types/react-dom": "^19.1.4",
+    "@types/supertest": "^6.0.3",
+    "jest-dom": "^4.0.0"
+  }
+}

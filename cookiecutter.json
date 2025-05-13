@@ -1,0 +1,12 @@
+{
+    "project_name": "A21 New Extension",
+    "project_slug": "a21-vscodemorozovext",
+    "extension_id": "{{ cookiecutter.project_slug }}",
+    "extension_display_name": "{{ cookiecutter.project_name }}",
+    "description": "A VS Code extension generated using the vscodemorozovext template.",
+    "author_name": "Andrei Beliak",
+    "author_email": "andrei.beliak@yahoo.com",
+    "github_username": "belyak",
+    "version": "0.0.1",
+    "publisher_id": "belyakpublisher"
+}

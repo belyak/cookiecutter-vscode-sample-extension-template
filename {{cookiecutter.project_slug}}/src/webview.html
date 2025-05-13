@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body { 
+        font-family: var(--vscode-font-family, sans-serif); 
+        padding: 20px;
+        color: var(--vscode-editor-foreground);
+        background-color: var(--vscode-editor-background);
+      }
+      #root { 
+        padding: 10px; 
+        margin-top: 20px; 
+        border: 1px dotted var(--vscode-focusBorder, #007fd4);
+      }
+      .debug { 
+        color: var(--vscode-errorForeground, red); 
+        margin: 10px 0; 
+        padding: 10px;
+        border: 1px solid var(--vscode-errorForeground, red);
+        background: rgba(255,0,0,0.05);
+      }
+      h1 { color: var(--vscode-editor-foreground); }
+      .react-loaded #root .debug { display: none; }
+    </style>
+    <!-- Script URI will be injected by the extension -->
+  </head>
+  <body>
+    <h1>{{ cookiecutter.extension_display_name }} Status</h1>
+    <div id="root">
+      <div class="debug">If you see this message instead of extension status data, React is not initializing properly</div>
+    </div>
+    <script>
+      // Add basic error handling for script loading
+      window.addEventListener('error', function(event) {
+        console.error('Script error detected:', event.error || event.message);
+        const errorDiv = document.createElement('div');
+        errorDiv.className = 'debug';
+        errorDiv.innerHTML = '<strong>Error loading script:</strong><br>' + 
+          (event.error ? event.error.toString() : event.message);
+        document.body.appendChild(errorDiv);
+      });
+    </script>
+  </body>
+</html>
