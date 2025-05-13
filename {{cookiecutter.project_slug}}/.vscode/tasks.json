@@ -10,8 +10,7 @@
         "reveal": "never"
       },
       "group": {
-        "kind": "build",
-        "isDefault": true
+        "kind": "build"
       }
     },
     {
@@ -27,7 +26,10 @@
       "type": "shell",
       "label": "Build Extension and Webview",
       "command": "npm run compile && npm run build:webview",
-      "group": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true,
+      },
       "problemMatcher": ["$tsc"]
     },
     {
